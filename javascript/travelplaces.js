@@ -27,17 +27,21 @@ $(document).ready(function() {
 });
 
 function querydatabase(token) {
-    firebase.database().ref('/Posts/').once('value').then(function(snapshot) {
+    firebase.database().ref('/Posts/' + token).once('value').then(function(snapshot) {
         var postObject = snapshot.val();
         console.log(postObject);
         var keys = Object.keys(postObject);
         var currentRow;
         var Username = $("#name-input").val();
-     
+        var newArray=[];
         for (i=0; i<keys.length; i++) {
             
             var currentObject = postObject[keys[i]];
-            console.log(currentObject.Username);
+            if (token==currentObject.Username) {
+                newArray.push(currentObject)}};
+                console.log(newArray);
+            // console.log(currentObject.Username);
+        for (j=0; j<newArray.length; j++) {
             if (i % 3 == 0) {
                 currentRow = document.createElement("div");
                 $(currentRow).addClass("row");
@@ -53,7 +57,8 @@ function querydatabase(token) {
             $(p).addClass("contentCaption");
             $(col).append(image);
             $(col).append(p);
-            $(currentRow).append(col);
+            $(currentRow).append(col);}
+            
         }
     });
     
