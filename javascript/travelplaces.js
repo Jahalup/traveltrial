@@ -59,9 +59,8 @@ function querydatabase(token) {
             $(col).append(p);
             $(currentRow).append(col);}
             
-        }
-    });
+        });
+    };
     
- }
+ 
    
-;
