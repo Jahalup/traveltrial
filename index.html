@@ -6,19 +6,23 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="login">
         <!-- <div class = jumbotron> -->
-            <div id="heading">
-                <h1>My Past Trips</h1>
-                
-            </div>
-
-            <button type="button" class="btn btn-primary" onclick="signIn();"><i class="fa fa-google-plus"></i></i>Sign in with Google</button>
+                <div id="heading">
+                        <h1>My Past Trips</h1>
+                    </div>
+<div class="row">
+            <button type="button" class="btn btn-primary" onclick="signIn();"><i class="fa fa-google-plus"></i>Sign in with Google
+            </button>
+</div>
+                </div>
+                <div class="container" id="welcome">
+                    <h2 id="welcomeText"></h2>
                 <form id="traininput" role="form">
                         <h2>Upload a New Picture:</h2>
                     <div class="form-group-row">
@@ -51,6 +55,7 @@
             <div id="imagecontainer">
             </div>
     </div>
+
                
             
                
@@ -58,7 +63,7 @@
             
             
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="javascript/trav.js"></script> 
+            <script src="travel.js"></script> 
             </body>
             </html>
 
