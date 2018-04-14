@@ -27,7 +27,7 @@ $(document).ready(function() {
 });
 
 function querydatabase(token) {
-    firebase.database().ref('/Posts/' + token).once('value').then(function(snapshot) {
+    firebase.database().ref('/Posts/').once('value').then(function(snapshot) {
         var postObject = snapshot.val();
         console.log(postObject);
         var keys = Object.keys(postObject);
