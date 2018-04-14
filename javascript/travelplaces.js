@@ -42,7 +42,7 @@ function querydatabase(token) {
                 console.log(newArray);
             // console.log(currentObject.Username);
         for (j=0; j<newArray.length; j++) {
-            if (i % 3 == 0) {
+            if (j % 3 == 0) {
                 currentRow = document.createElement("div");
                 $(currentRow).addClass("row");
                 $("#contentHolder").append(currentRow);
