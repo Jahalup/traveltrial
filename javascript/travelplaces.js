@@ -19,14 +19,14 @@ $(document).ready(function() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             var token = firebase.auth().currentUser.uid;
-            querydatabase(token);
+            querydatabase();
         } else {
             window.location = "index.html"
         }
     });
 });
 
-function querydatabase(token) {
+function querydatabase() {
     firebase.database().ref('/Posts/').once('value').then(function(snapshot) {
         var postObject = snapshot.val();
         console.log(postObject);
@@ -35,7 +35,7 @@ function querydatabase(token) {
         var Username = $("#name-input").val();
         var newArray=[];
         for (i=0; i<keys.length; i++) {
-            
+            var token = firebase.auth().currentUser.uid;
             var currentObject = postObject[keys[i]];
             if (token==currentObject.Username) {
                 newArray.push(currentObject)}};
