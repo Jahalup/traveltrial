@@ -32,7 +32,7 @@ function querydatabase() {
         console.log(postObject);
         var keys = Object.keys(postObject);
         var currentRow;
-        var Username = $("#name-input").val();
+        // var Username = $("#name-input").val();
         var newArray=[];
         for (i=0; i<keys.length; i++) {
             var token = firebase.auth().currentUser.uid;
@@ -50,10 +50,10 @@ function querydatabase() {
             var col = document.createElement("div");
             $(col).addClass("col-lg-4");
             var image = document.createElement("img");
-            image.src = currentObject.url;
+            image.src = newArray[j].url;
             $(image).addClass("contentImage");
             var p = document.createElement("p");
-            $(p).html(currentObject.caption);
+            $(p).html(newArray[j].caption);
             $(p).addClass("contentCaption");
             $(col).append(image);
             $(col).append(p);
