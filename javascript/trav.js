@@ -81,6 +81,7 @@ $("#filebutton").on("change", function(event) {
             updates['/Posts/' +postKey] = postData;
             firebase.database().ref().update(updates);
             console.log(downloadURL);
+            showWelcomeContainer();
             }
         );
     });
