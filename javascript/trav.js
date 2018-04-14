@@ -25,7 +25,7 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     // The signed-in user info.
     user = result.user;
-    showwelcomeContainer();
+    showWelcomeContainer();
    
     
     // ...
@@ -41,7 +41,7 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   });
 };
 
-function showWlecomeContainer() {
+function showWelcomeContainer() {
   $("#login").hide();
   $("#welcome").show();
   $("#welcomeText").html("Hello, " + user.displayName);
