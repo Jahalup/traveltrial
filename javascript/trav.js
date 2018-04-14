@@ -76,7 +76,7 @@ $("#filebutton").on("change", function(event) {
             var postData = {
                 url: downloadURL,
                 caption: $("#imageCaption").val(),
-                Username: $("#name-input").val()
+                Username: user.uid
                 };
             updates['/Posts/' +postKey] = postData;
             firebase.database().ref().update(updates);
@@ -85,40 +85,41 @@ $("#filebutton").on("change", function(event) {
         );
     });
 
-function querydatabase() {
-   firebase.database().ref('/Posts/').once('value').then(function(snapshot) {
-       var postObject = snapshot.val();
-       console.log(postObject);
-       var keys = Object.keys(postObject);
-       var currentRow;
-       var Username = $("#name-input").val();
+
+// function querydatabase() {
+//    firebase.database().ref('/Posts/').once('value').then(function(snapshot) {
+//        var postObject = snapshot.val();
+//        console.log(postObject);
+//        var keys = Object.keys(postObject);
+//        var currentRow;
+//        var Username = $("#name-input").val();
     
-       for (i=0; i<keys.length; i++) {
+//        for (i=0; i<keys.length; i++) {
            
-           var currentObject = postObject[keys[i]];
-           console.log(currentObject.Username);
-           if (i % 3 == 0) {
-               currentRow = document.createElement("div");
-               $(currentRow).addClass("row");
-               $("#imagecontainer").append(currentRow);
-           }
-           var col = document.createElement("div");
-           $(col).addClass("col-lg-4");
-           var image = document.createElement("img");
-           image.src = currentObject.url;
-           $(image).addClass("contentImage");
-           var p = document.createElement("p");
-           $(p).html(currentObject.caption);
-           $(p).addClass("contentCaption");
-           $(col).append(image);
-           $(col).append(p);
-           $(currentRow).append(col);
-       }
-   });
+//            var currentObject = postObject[keys[i]];
+//            console.log(currentObject.Username);
+//            if (i % 3 == 0) {
+//                currentRow = document.createElement("div");
+//                $(currentRow).addClass("row");
+//                $("#imagecontainer").append(currentRow);
+//            }
+//            var col = document.createElement("div");
+//            $(col).addClass("col-lg-4");
+//            var image = document.createElement("img");
+//            image.src = currentObject.url;
+//            $(image).addClass("contentImage");
+//            var p = document.createElement("p");
+//            $(p).html(currentObject.caption);
+//            $(p).addClass("contentCaption");
+//            $(col).append(image);
+//            $(col).append(p);
+//            $(currentRow).append(col);
+//        }
+//    });
    
-}
+// }
   
-  querydatabase();
+//   querydatabase();
 
 
 
