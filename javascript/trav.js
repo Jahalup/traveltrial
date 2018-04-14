@@ -32,6 +32,8 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
     // ...
   });
 }
+
+
 //   $("#addName").on("click", function(event) {
 //     event.preventDefault();
 //     name = $("#name-input").val().trim();});
