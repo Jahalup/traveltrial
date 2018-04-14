@@ -16,7 +16,7 @@ var user;
 
 
 $(document).ready(function() {
-    firebase.auth().onAuthStateChenged(function(user) {
+    firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             var token = firebase.auth().currentUser.uid;
             queryDatabase(token);
