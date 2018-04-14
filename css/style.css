@@ -27,9 +27,9 @@
     font-size: 50px;
     text-align: center;
 }
-body {
+/* body {
     background-color: blue;
-}
+} */
 
 #inputName, #inputCaption{
     font-size: 25px;
@@ -37,4 +37,9 @@ body {
 
 #name-input {
     width: 30%;
+}
+
+#placesBeen {
+    font-size: 50px;
+    text-align: center;
 }
