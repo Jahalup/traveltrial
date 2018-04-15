@@ -17,7 +17,7 @@
 .contentImage {
     width: 100%;
 }
-.contentCaption {
+.contentCaption, .contentLocation {
     width: 100%;
     text-align: center;
     font-size: 1em;
@@ -31,13 +31,11 @@
     background-color: blue;
 } */
 
-#inputName, #inputCaption{
+#inputLocation, #inputCaption{
     font-size: 25px;
 }
 
-#name-input {
-    width: 30%;
-}
+
 
 #placesBeen {
     font-size: 50px;
@@ -64,4 +62,17 @@
 #logoimage {
     width: 200px;
     height: 200px;
+}
+#welcomeText {
+    text-align: center;
+}
+#locationInput {
+    width: 30%;
+}
+#imageCaption {
+    width: 70%;
+}
+#linkToPhotos {
+    text-align: center;
+    
 }
