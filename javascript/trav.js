@@ -63,7 +63,7 @@ $("#signout").on("click", function() {
       });
 });
 
-$("locationInput").focus(function(){
+$("#locationInput").focus(function(){
     uploader.value = 0;
     document.getElementById("newp").style.visibility = "hidden"});
 
