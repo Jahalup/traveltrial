@@ -97,8 +97,8 @@ $("#filebutton").on("change", function(event) {
             $(newp).html("Upload Complete");
             $("#uploadComplete").append(newp);
             uploader.value = 0;
-            $("#locationInput")[0].reset();
-            $("#imageCaption")[0].reset();
+            $("#locationInput").text="";
+            $("#imageCaption").text="";
             }
         );
     });
