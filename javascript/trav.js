@@ -15,6 +15,9 @@ firebase.initializeApp(config);
 var database = firebase.database();
 var provider = new firebase.auth.GoogleAuthProvider();
 var user;
+provider.setCustomParameters({
+    prompt: 'select_account'
+ });
 
 $(document).ready(function() {
   $("#welcome").hide();
@@ -40,6 +43,11 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
     // ...
   });
 };
+
+
+
+
+
 
 function showWelcomeContainer() {
   $("#login").hide();
