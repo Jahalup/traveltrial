@@ -39,7 +39,8 @@
 
 #placesBeen {
     font-size: 50px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 #memories {
@@ -74,5 +75,5 @@
 }
 #linkToPhotos {
     text-align: center;
-    
+
 }
