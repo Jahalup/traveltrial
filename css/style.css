@@ -36,9 +36,10 @@
 }
 
 #signout {
-    background-color: blue;
+    background-color:rgb(109, 109, 202);
     border-radius: 5px;
     color: black;
+    margin-top: 75px;
 }
 
 #placesBeen {

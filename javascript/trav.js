@@ -96,6 +96,9 @@ $("#filebutton").on("change", function(event) {
             $(newp).addClass("uploadComp");
             $(newp).html("Upload Complete");
             $("#uploadComplete").append(newp);
+            uploader.value = 0;
+            $("#locationInput")[0].reset();
+            $("#imageCaption")[0].reset();
             }
         );
     });
