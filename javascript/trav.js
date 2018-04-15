@@ -54,6 +54,15 @@ function showWelcomeContainer() {
 //         name: name
 //     });
 
+$("#signout").on("click", function() {
+    firebase.auth().signOut().then(function() {
+        $("#login").show();
+        $("#welcome").hide();
+      }).catch(function(error) {
+        console.log("logout error");
+      });
+})
+
 $("#filebutton").on("change", function(event) {
     var file = event.target.files[0];
     var filename = file.name

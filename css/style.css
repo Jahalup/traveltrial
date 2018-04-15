@@ -35,7 +35,11 @@
     font-size: 25px;
 }
 
-
+#signout {
+    background-color: blue;
+    border-radius: 5px;
+    color: black;
+}
 
 #placesBeen {
     font-size: 50px;
@@ -76,4 +80,7 @@
 #linkToPhotos {
     text-align: center;
 
+}
+#travelinput {
+    margin-bottom: 100px;
 }
