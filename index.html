@@ -16,18 +16,23 @@
                 <div id="heading">
                         <h1>My Past Trips</h1>
                     </div>
-<div class="row">
-            <button type="button" class="btn btn-primary" onclick="signIn();"><i class="fa fa-google-plus"></i>Sign in with Google
+                    <div id="logoWrapper">
+                        <img id="logoimage" src="images/TraveLogo.png">
+                    </div>
+<div class="row" id="buttonWrapper">
+    
+            <button type="button" id="signIn" class="btn btn-primary" onclick="signIn();"><i class="fa fa-google-plus"></i>Sign in with Google
             </button>
+    
 </div>
                 </div>
                 <div class="container" id="welcome">
                     <h2 id="welcomeText"></h2>
-                <form id="traininput" role="form">
+                <form id="travelinput" role="form">
                         <h2>Upload a New Picture:</h2>
                     <div class="form-group-row">
-                        <label for="name-input" id="inputName">Your Name:</label>
-                        <input class="form-control" id="name-input" type="text">
+                        <label for="name-input" id="inputLocation">Location:</label>
+                        <input class="form-control" id="locationInput" type="text">
                     </div>
                     <div class="form-group-row">
                         <label for="caption-input" id="inputCaption">Caption:</label>
@@ -41,6 +46,9 @@
                     <!-- <div class="form-group row">
                         <button class="btn btn-default" id="photosubmit" type="submit">Submit</button>
                     </div> -->
+                    <div id="uploadComplete">
+
+                    </div>
                     <div id="placesBeen" class="form-group row">
                         <a id="linkToPhotos" href="myplaces.html">My memories</a>
                     </div>
@@ -55,8 +63,7 @@
                             </div>
                         </div> -->
                 </form>
-            <div id="imagecontainer">
-            </div>
+           
     </div>
 
                

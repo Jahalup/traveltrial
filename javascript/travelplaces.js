@@ -55,8 +55,12 @@ function querydatabase() {
             var p = document.createElement("p");
             $(p).html(newArray[j].caption);
             $(p).addClass("contentCaption");
+            var p2 = document.createElement("p");
+            $(p2).html(newArray[j].location);
+            $(p2).addClass("contentLocation");
             $(col).append(image);
             $(col).append(p);
+            $(col).append(p2);
             $(currentRow).append(col);}
             
         });

@@ -75,6 +75,7 @@ $("#filebutton").on("change", function(event) {
             var updates = {};
             var postData = {
                 url: downloadURL,
+                location: $("#locationInput").val(),
                 caption: $("#imageCaption").val(),
                 Username: user.uid
                 };
@@ -82,6 +83,10 @@ $("#filebutton").on("change", function(event) {
             firebase.database().ref().update(updates);
             console.log(downloadURL);
             showWelcomeContainer();
+            var newp = document.createElement("p");
+            $(newp).addClass("uploadComp");
+            $(newp).html("Upload Complete");
+            $("#uploadComplete").append(newp);
             }
         );
     });
