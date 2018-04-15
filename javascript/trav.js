@@ -61,7 +61,14 @@ $("#signout").on("click", function() {
       }).catch(function(error) {
         console.log("logout error");
       });
-})
+});
+
+$("locationInput").focus(function(){
+    uploader.value = 0;
+    document.getElementById("newp").style.visibility = "hidden"});
+
+
+
 
 $("#filebutton").on("change", function(event) {
     var file = event.target.files[0];
@@ -94,11 +101,11 @@ $("#filebutton").on("change", function(event) {
             showWelcomeContainer();
             var newp = document.createElement("p");
             $(newp).addClass("uploadComp");
+            $(newp).attr('id', 'newp');
             $(newp).html("Upload Complete");
             $("#uploadComplete").append(newp);
-            uploader.value = 0;
-            $("#locationInput").text="";
-            $("#imageCaption").text="";
+            $("#locationInput").val('');
+            $("#imageCaption").val('');
             }
         );
     });
